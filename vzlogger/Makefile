@@ -18,8 +18,7 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 CMAKE_INSTALL:=1
-CMAKE_OPTIONS += \
-	-DBUILD_TEST:BOOL=OFF
+CMAKE_OPTIONS += -DBUILD_TEST:BOOL=OFF
 
 define Package/vzlogger
   SECTION:=utils
