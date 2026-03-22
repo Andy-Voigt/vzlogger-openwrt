@@ -24,3 +24,14 @@ the .ipk package
 
 ## PRs
 Feel free to send PRs ;)
+
+
+## Easy build with sdk
+
+```
+[andy@galactica openwrt-sdk-25.12.1-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64 ]$ ./scripts/feeds install libmosquitto-ssl libsml libmicrohttpd libcurl libunistring cyrus-sasl libgcrypt gnutls libjson-c libuuid
+```
+
+```
+[andy@galactica openwrt-sdk-25.12.1-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64 ]$ make package/vzlogger/compile -j9 V=s                                                                                         
+```
