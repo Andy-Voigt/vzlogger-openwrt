@@ -1,13 +1,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=vzlogger
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL=https://github.com/volkszaehler/vzlogger.git
+PKG_VERSION:=0.8.9
 PKG_RELEASE:=1
+
+PKG_SOURCE:=v$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/volkszaehler/vzlogger/archive/refs/tags/
+PKG_HASH:=734fcd78ef5e1a41913fdef627b8382d9c0c04cb99fe023cdb50dc2ad2d972a4
+
+PKG_MAINTAINER:=Andy Voigt <a.voigt@mailbox.org>
 PKG_LICENSE:=GPL-3.0-or-later
-PKG_LICENSE_FILES:=COPYING
-PKG_SOURCE_DATE:=2025-10-06
-PKG_SOURCE_VERSION:=fdad271ea3884f1ee970a8b0b6c42451d93f20a4
+PKG_LICENSE_FILES:=LICENSE
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
