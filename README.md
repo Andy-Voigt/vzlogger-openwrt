@@ -29,7 +29,7 @@ Feel free to send PRs ;)
 ## Easy build with sdk
 ### download a sdk
 ```
-https://downloads.openwrt.org/releases/25.12.2/targets/rockchip/armv8/
+wget https://downloads.openwrt.org/releases/25.12.2/targets/rockchip/armv8/
 ```
 ### install feeds
 ```
