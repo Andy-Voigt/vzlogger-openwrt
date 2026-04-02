@@ -41,7 +41,7 @@ ln -s /home/andy/Projects/github/vzlogger-openwrt/libsml package/
 ```
 ### link vzlogger 
 ```
-ln -s /home/andy/Projects/github/vzlogger-openwrt/vzlogger package 
+ln -s /home/andy/Projects/github/vzlogger-openwrt/vzlogger package/
 ```
 ### compile libsml
 ```
