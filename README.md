@@ -28,10 +28,23 @@ Feel free to send PRs ;)
 
 ## Easy build with sdk
 
+### install feeds
 ```
-[andy@galactica openwrt-sdk-25.12.1-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64 ]$ ./scripts/feeds install libmosquitto-ssl libsml libmicrohttpd libcurl libunistring cyrus-sasl libgcrypt gnutls libjson-c libuuid
+./scripts/feeds update -a && ./scripts/feeds install -a
 ```
-
+### link libsml
 ```
-[andy@galactica openwrt-sdk-25.12.1-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64 ]$ make package/vzlogger/compile -j9 V=s                                                                                         
+ln -s /home/andy/Projects/github/vzlogger-openwrt/libsml package/
+```
+### link vzlogger 
+```
+ln -s /home/andy/Projects/github/vzlogger-openwrt/vzlogger package 
+```
+### compile libsml
+```
+make package/libsml/{clean,compile} -j9 V=s
+```
+### compile vzlogger
+```
+make package/vzlogger/{clean,compile} -j9 V=s
 ```
