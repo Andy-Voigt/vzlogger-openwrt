@@ -37,7 +37,7 @@ endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
-	$(CP) $(PKG_BUILD_DIR)/sml/include/sml/*.h $(1)/usr/include/
+	$(CP) $(PKG_BUILD_DIR)/sml/include/* $(1)/usr/include/
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_BUILD_DIR)/sml/lib/libsml.so* $(1)/usr/lib/
 	$(LN) libsml.so.$(PKG_RELEASE) $(1)/usr/lib/libsml.so
