@@ -38,14 +38,15 @@ endef
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
 	$(CP) $(PKG_BUILD_DIR)/sml/include/sml/*.h $(1)/usr/include/
-
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_BUILD_DIR)/sml/lib/libsml.so* $(1)/usr/lib/
+	$(LN) libsml.so.$(PKG_VERSION) $(1)/usr/lib/libsml.so
 endef
 
 define Package/libsml/install
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_BUILD_DIR)/sml/lib/libsml.so* $(1)/usr/lib/
+	$(LN) libsml.so.$(PKG_VERSION) $(1)/usr/lib/libsml.so
 endef
 
 $(eval $(call BuildPackage,libsml))
